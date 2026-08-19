@@ -64,10 +64,15 @@
 
         <div>
           <div class="form-success" role="status">
-            Thanks &mdash; your email client should open with your message ready to send. If it doesn&rsquo;t open automatically, email us directly at bernard@truenorth-inc.com.
+            Thanks &mdash; your message has been sent. We typically respond within one business day.
           </div>
+          <div id="contact-error" class="form-error" role="alert"></div>
 
-          <form id="contact-form" class="tool-card" data-contact-email="bernard@truenorth-inc.com" novalidate>
+          <form id="contact-form" class="tool-card" novalidate>
+            <div class="field" style="position:absolute; left:-9999px; top:-9999px;" aria-hidden="true">
+              <label for="website">Leave this field blank</label>
+              <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+            </div>
             <div class="tool-grid">
               <div class="field">
                 <label for="name">Your name</label>
@@ -99,7 +104,6 @@
               <textarea id="message" name="message" required placeholder="e.g. We're not sure if we need a full audit or AUP this year, and our fiscal year ends June 30."></textarea>
             </div>
             <button type="submit" class="btn btn-primary btn-block">Send Message</button>
-            <p class="small" style="margin-top:12px;">This form opens a pre-filled email in your default mail app &mdash; nothing is transmitted through this website.</p>
           </form>
         </div>
 
@@ -203,6 +207,9 @@
     </div>
   </div>
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script src="js/supabase-client.js"></script>
+<script src="js/contact-form.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

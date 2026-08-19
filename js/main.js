@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
   initFaq();
   initChecklist();
   initThresholdTool();
-  initContactForm();
   initYear();
 });
 
@@ -186,53 +185,6 @@ function initThresholdTool() {
 
 function formatCurrency(n) {
   return "$" + Math.round(n).toLocaleString("en-US");
-}
-
-/* ---------------- Contact form ----------------
-   This site has no server backend, so the form composes a pre-filled
-   email to open in the visitor's mail client rather than silently
-   pretending a message was transmitted.
-------------------------------------------------------------------------- */
-function initContactForm() {
-  var form = document.querySelector("#contact-form");
-  if (!form) return;
-  var success = document.querySelector(".form-success");
-  var contactEmail = form.getAttribute("data-contact-email") || "";
-
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    if (!form.checkValidity()) {
-      form.reportValidity();
-      return;
-    }
-
-    var name = form.name.value.trim();
-    var entity = form.entity.value.trim();
-    var email = form.email.value.trim();
-    var message = form.message.value.trim();
-
-    var subject = "Audit compliance inquiry from " + (entity || name);
-    var bodyLines = [
-      "Name: " + name,
-      "Entity/Local Government: " + entity,
-      "Email: " + email,
-      "",
-      message
-    ];
-    var mailto =
-      "mailto:" + encodeURIComponent(contactEmail) +
-      "?subject=" + encodeURIComponent(subject) +
-      "&body=" + encodeURIComponent(bodyLines.join("\n"));
-
-    if (success) {
-      success.classList.add("show");
-      success.setAttribute("tabindex", "-1");
-      success.focus();
-    }
-
-    window.location.href = mailto;
-    form.reset();
-  });
 }
 
 /* ---------------- Footer year ---------------- */
