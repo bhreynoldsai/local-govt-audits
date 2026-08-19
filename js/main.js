@@ -1,4 +1,4 @@
-// True North Government Audit Advisors — shared front-end behavior
+// Georgia Audit Ready — shared front-end behavior
 // No build step, no external dependencies, no data leaves the browser.
 
 document.addEventListener("DOMContentLoaded", function () {

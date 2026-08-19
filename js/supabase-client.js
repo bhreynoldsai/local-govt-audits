@@ -1,4 +1,4 @@
-// True North client portal — Supabase client bootstrap.
+// Georgia Audit Ready client portal — Supabase client bootstrap.
 //
 // This key is a "publishable" key, safe to ship in client-side code: it
 // identifies the project but grants no access on its own. Every read and
