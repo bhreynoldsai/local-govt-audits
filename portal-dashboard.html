@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Client Portal | True North Government Audit Advisors</title>
+<meta name="description" content="Manage your audit-readiness documents securely.">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%2310233d'/%3E%3Cpath d='M12 3L4 6.5v2h16v-2z' fill='%23e3a368'/%3E%3Cpath d='M5 10h2v8H5zm12 0h2v8h-2zM9.5 10h2v8h-2zm3 0h2v8h-2z' fill='%23fff'/%3E%3Cpath d='M3 19h18v2H3z' fill='%23e3a368'/%3E%3C/svg%3E">
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to content</a>
+
+<div class="portal-topbar">
+  <div class="container">
+    <div class="org-info">
+      <span class="label">Signed in as</span>
+      <span class="value" id="org-name">&hellip;</span>
+      <span class="user-info" id="user-name"></span>
+    </div>
+    <div style="display:flex; gap:12px; align-items:center;">
+      <a href="index.html" class="btn btn-ghost" style="color:#eef2f7; border-color:rgba(255,255,255,0.35);">Back to site</a>
+      <button type="button" id="sign-out-btn" class="btn btn-primary">Sign Out</button>
+    </div>
+  </div>
+</div>
+
+<main id="main">
+  <div class="page-header">
+    <div class="container">
+      <span class="eyebrow">Client Portal</span>
+      <h1>Your audit document vault</h1>
+      <p>Upload directly to the category your auditor will ask for. Files are private to your organization &mdash; encrypted at rest and in transit, with every upload, download, and deletion logged below.</p>
+      <div id="dashboard-error" class="form-error" role="alert" style="margin-top:16px;"></div>
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="grid grid-3" id="category-grid">
+        <!-- Category cards injected by js/portal-dashboard.js -->
+      </div>
+    </div>
+  </section>
+
+  <section class="alt-bg">
+    <div class="container-narrow">
+      <div class="section-head">
+        <span class="kicker">Transparency</span>
+        <h2>Recent activity on your account</h2>
+        <p>Every upload, download, and deletion for your organization is recorded here so you always know what happened and when.</p>
+      </div>
+      <ul class="portal-file-list" id="audit-log-list"></ul>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <span>&copy; <span data-year>2026</span> True North Government Audit Advisors.</span>
+      <span><a href="contact.html">bernard@truenorth-inc.com</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script src="js/supabase-client.js"></script>
+<script src="js/portal-dashboard.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
