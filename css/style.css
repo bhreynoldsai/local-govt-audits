@@ -281,6 +281,27 @@ section.tight { padding: 48px 0; }
 }
 .card .icon svg { width: 22px; height: 22px; }
 
+.doc-list { list-style: none; margin: 14px 0 0; padding: 0; }
+.doc-list li {
+  position: relative;
+  padding: 7px 0 7px 20px;
+  font-size: 0.92rem;
+  color: var(--muted);
+  border-bottom: 1px dashed var(--border);
+}
+.doc-list li:last-child { border-bottom: none; }
+.doc-list li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 15px;
+  width: 7px;
+  height: 7px;
+  border-radius: 2px;
+  background: var(--accent-light);
+}
+.doc-card .badge { margin-bottom: 12px; }
+
 .service-card { display: flex; flex-direction: column; }
 .service-card .price-tag {
   margin-top: auto;
