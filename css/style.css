@@ -301,6 +301,18 @@ section.tight { padding: 48px 0; }
   background: var(--accent-light);
 }
 .doc-card .badge { margin-bottom: 12px; }
+.doc-storage {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  font-size: 0.82rem;
+  color: var(--navy-2);
+}
+.doc-storage .glyph { flex-shrink: 0; line-height: 1.3; }
+.doc-storage strong { color: var(--accent-dark); }
 
 .service-card { display: flex; flex-direction: column; }
 .service-card .price-tag {
