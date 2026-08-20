@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /portal-login.html
+Disallow: /portal-dashboard.html
+Disallow: /portal-forgot-password.html
+Disallow: /portal-reset-password.html
+
+Sitemap: https://gaauditportal.com/sitemap.xml
